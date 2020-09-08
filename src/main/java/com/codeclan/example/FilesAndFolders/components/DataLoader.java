@@ -63,6 +63,24 @@ public class DataLoader implements ApplicationRunner {
         File file4 = new File("Letter", "PDF", 7, folder4);
         fileRepository.save(file4);
 
+        folder1.addFile(file1);
+        folderRepository.save(folder1);
+        folder2.addFile(file2);
+        folderRepository.save(folder2);
+        folder3.addFile(file3);
+        folderRepository.save(folder3);
+        folder3.addFile(file4);
+        folderRepository.save(folder4);
+
+        user1.addFolder(folder1);
+        userRepository.save(user1);
+        user2.addFolder(folder2);
+        userRepository.save(user2);
+        user3.addFolder(folder3);
+        userRepository.save(user3);
+        user4.addFolder(folder4);
+        userRepository.save(user4);
+
     }
 
 }

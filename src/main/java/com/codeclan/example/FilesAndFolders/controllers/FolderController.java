@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class FolderController {
@@ -24,8 +25,8 @@ public class FolderController {
     }
 
     @GetMapping(value = "/folders/{id}")
-    public ResponseEntity getFolder(@PathVariable Long id) {
-        return new ResponseEntity(folderRepository.findById(id), HttpStatus.OK);
+    public Optional<Folder> getFolder(@PathVariable Long id) {
+        return folderRepository.findById(id);
     }
 
     @PostMapping(value = "/folders")

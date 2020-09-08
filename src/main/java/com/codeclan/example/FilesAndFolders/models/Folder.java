@@ -65,4 +65,8 @@ public class Folder {
     public void setUser(User user) {
         this.user = user;
     }
+
+    public void addFile(File file) {
+        this.files.add(file);
+    }
 }
